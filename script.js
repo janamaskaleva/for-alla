@@ -87,14 +87,15 @@ function goToScreen3() {
   showContentForActivity(selectedActivity);
 }
 
-goToFinalScreen() {
+function goToFinalScreen() {  // ✅ добавлено "function"
   deactivateScreen(screen3);
   activateScreen(finalScreen);
   const finalTextEl = document.getElementById("finalText");
   finalTextEl.innerHTML = "";
+  finalTextEl.scrollTop = 0; // сбрасываем прокрутку
   typeWriter(finalTextEl, finalText, createFallingHearts);
 }
-}
+
 function backToScreen1() {
   deactivateScreen(screen2);
   activateScreen(screen1);
@@ -134,9 +135,8 @@ function createFallingHearts() {
     setTimeout(() => {
       heart.remove();
     }, 5000);
-  }, 100); // много и быстро
+  }, 100);
 
-  // Остановим через 20 секунд
   setTimeout(() => clearInterval(interval), 20000);
 }
 
@@ -144,21 +144,22 @@ function createFallingHearts() {
 function showContentForActivity(activity) {
   const content = document.getElementById("content3");
   content.innerHTML = "";
-}
-  switch (activity) {
-case "посмеяться":
-  content.innerHTML = `
-    <img src="1.jpg" alt="мем" style="max-width:100%; margin:15px 0;">
-    <img src="2.jpg" alt="мем" style="max-width:100%; margin:15px 0;">
-    <img src="3.jpg" alt="мем" style="max-width:100%; margin:15px 0;">
-    <img src="4.jpg" alt="мем" style="max-width:100%; margin:15px 0;">
-    <img src="5.jpg" alt="мем" style="max-width:100%; margin:15px 0;">
-    <img src="6.jpg" alt="мем" style="max-width:100%; margin:15px 0;">
-    <img src="7.jpg" alt="мем" style="max-width:100%; margin:15px 0;">
-    <img src="8.jpg" alt="мем" style="max-width:100%; margin:15px 0;">
-    <img src="9.jpg" alt="мем" style="max-width:100%; margin:15px 0;">
-  `;
-  break;
+  content.scrollTop = 0; // сбрасываем прокрутку
+
+  switch (activity) {  //  switch внутри функции
+    case "посмеяться":
+      content.innerHTML = `
+        <img src="1.jpg" alt="мем" style="max-width:100%; margin:15px 0;">
+        <img src="2.jpg" alt="мем" style="max-width:100%; margin:15px 0;">
+        <img src="3.jpg" alt="мем" style="max-width:100%; margin:15px 0;">
+        <img src="4.jpg" alt="мем" style="max-width:100%; margin:15px 0;">
+        <img src="5.jpg" alt="мем" style="max-width:100%; margin:15px 0;">
+        <img src="6.jpg" alt="мем" style="max-width:100%; margin:15px 0;">
+        <img src="7.jpg" alt="мем" style="max-width:100%; margin:15px 0;">
+        <img src="8.jpg" alt="мем" style="max-width:100%; margin:15px 0;">
+        <img src="9.jpg" alt="мем" style="max-width:100%; margin:15px 0;">
+      `;
+      break;
 
     case "посмотреть кино":
       content.innerHTML = `
