@@ -87,13 +87,13 @@ function goToScreen3() {
   showContentForActivity(selectedActivity);
 }
 
-function goToFinalScreen() {
+goToFinalScreen() {
   deactivateScreen(screen3);
   activateScreen(finalScreen);
   const finalTextEl = document.getElementById("finalText");
   finalTextEl.innerHTML = "";
-  finalTextEl.scrollTop = 0; // ← сбрасываем прокрутку
   typeWriter(finalTextEl, finalText, createFallingHearts);
+}
 }
 function backToScreen1() {
   deactivateScreen(screen2);
@@ -144,8 +144,6 @@ function createFallingHearts() {
 function showContentForActivity(activity) {
   const content = document.getElementById("content3");
   content.innerHTML = "";
-  content.scrollTop = 0; // ← сбрасываем прокрутку
-  // ... остальной код
 }
   switch (activity) {
 case "посмеяться":
