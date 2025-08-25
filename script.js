@@ -145,19 +145,19 @@ function showContentForActivity(activity) {
   const content = document.getElementById("content3");
 
   switch (activity) {
-    case "посмеяться":
-      content.innerHTML = `
-        <img src="./memes/1.jpg" alt="мем" style="max-width:100%; margin:15px 0;">
-        <img src="./memes/2.jpg" alt="мем" style="max-width:100%; margin:15px 0;">
-        <img src="./memes/3.jpg" alt="мем" style="max-width:100%; margin:15px 0;">
-        <img src="./memes/4.jpg" alt="мем" style="max-width:100%; margin:15px 0;">
-        <img src="./memes/5.jpg" alt="мем" style="max-width:100%; margin:15px 0;">
-        <img src="./memes/6.jpg" alt="мем" style="max-width:100%; margin:15px 0;">
-        <img src="./memes/7.jpg" alt="мем" style="max-width:100%; margin:15px 0;">
-        <img src="./memes/8.jpg" alt="мем" style="max-width:100%; margin:15px 0;">
-        <img src="./memes/9.jpg" alt="мем" style="max-width:100%; margin:15px 0;">
-      `;
-      break;
+case "посмеяться":
+  content.innerHTML = `
+    <img src="1.jpg" alt="мем" style="max-width:100%; margin:15px 0;">
+    <img src="2.jpg" alt="мем" style="max-width:100%; margin:15px 0;">
+    <img src="3.jpg" alt="мем" style="max-width:100%; margin:15px 0;">
+    <img src="4.jpg" alt="мем" style="max-width:100%; margin:15px 0;">
+    <img src="5.jpg" alt="мем" style="max-width:100%; margin:15px 0;">
+    <img src="6.jpg" alt="мем" style="max-width:100%; margin:15px 0;">
+    <img src="7.jpg" alt="мем" style="max-width:100%; margin:15px 0;">
+    <img src="8.jpg" alt="мем" style="max-width:100%; margin:15px 0;">
+    <img src="9.jpg" alt="мем" style="max-width:100%; margin:15px 0;">
+  `;
+  break;
 
     case "посмотреть кино":
       content.innerHTML = `
