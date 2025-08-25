@@ -173,3 +173,11 @@ body {
     opacity: 0;
   }
 }
+.content-area h3 {
+  text-align: left;
+  margin-bottom: 10px;
+}
+
+.content-area p {
+  text-align: justify;
+}
